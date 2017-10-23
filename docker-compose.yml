@@ -1,0 +1,16 @@
+services:
+  nginx:
+    image: "${DOCKER_USER}/lnmp-compose:v0.1"
+    build:
+      context: ./
+      dockerfile: Dockerfile.nginx
+  php:
+    image: "${DOCKER_USER}/lnmp-compose:v0.1"
+    build:
+      context: ./
+      dockerfile: Dockerfile.php
+  mysql:
+    image: mysql:5.7
+    build:
+      context: ./
+      dockerfile: Dockerfile.mysql
